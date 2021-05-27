@@ -1,13 +1,18 @@
 from rest_framework import serializers
 from clothing_cellar_app.models import ClothingCellar
-from product_cellar_app.serializers import ProductCellarSerializer
-from product_cellar_app.models import ProductCellar
 
 
 class ClothingCellarSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClothingCellar
         fields = '__all__'
+        read_only_fields = ['uuid']
+
+
+class SaveClothingCellarSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ClothingCellar
+        fields = ['uuid', 'product_cellar', 'size', 'color', 'state', 'info']
         read_only_fields = ['uuid']
 
     def validate(self, attrs):
@@ -22,6 +27,15 @@ class ClothingCellarSerializer(serializers.ModelSerializer):
         return attrs
 
 
+class ListClothingCellarSerializer(serializers.Serializer):
+    uuid = serializers.UUIDField()
+    product_cellar = serializers.CharField()
+    size = serializers.CharField()
+    color = serializers.CharField()
+    state = serializers.CharField()
+    info = serializers.CharField()
+
+
 class ListClothingProductCellarSerializer(serializers.Serializer):
     uuid = serializers.UUIDField()
     product_cellar = serializers.CharField()
@@ -33,3 +47,14 @@ class ListClothingProductCellarSerializer(serializers.Serializer):
     color = serializers.CharField()
     state = serializers.CharField()
     info = serializers.CharField()
+
+
+class ListClothingCellarGroupSizeSerializer(serializers.Serializer):
+    size = serializers.CharField()
+    free = serializers.IntegerField()
+
+
+class ListClothingCellarGroupColorSerializer(serializers.Serializer):
+    size = serializers.CharField()
+    color = serializers.CharField()
+    free = serializers.IntegerField()

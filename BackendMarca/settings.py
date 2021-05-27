@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'provider_app.apps.ProviderAppConfig',
     'product_cellar_app.apps.ProductCellarAppConfig',
     'clothing_cellar_app.apps.ClothingCellarAppConfig',
+    'collection_app.apps.CollectionAppConfig',
+    'section_app.apps.SectionAppConfig',
 ]
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'

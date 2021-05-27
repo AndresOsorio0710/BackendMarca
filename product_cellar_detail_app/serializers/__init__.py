@@ -1,2 +1,0 @@
-from .product_cellar_detail import ProductInCellarDetailSerializer, SaveProductInCellarDetailSerializer, \
-    ListProductInCellarSerializer, ListProductInCellarDetailSerializer, ListLiteProductInCellarDetailSerializer
