@@ -32,6 +32,7 @@ color_options = [
 
 state_options = [
     ["OK", "PRODUCTO OK"],
+    ["SOLD", "VENDIDO"],
     ["DEFECTIVE", "PRODUCTO DEFECTUOSO"],
     ["DAMAGED", "PRODUCTO DAÑADO"]
 ]

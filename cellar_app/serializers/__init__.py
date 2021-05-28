@@ -1,1 +1,1 @@
-from .cellar import CellarSerializer, ListLiteCellarSerializer, SaveCellarSerializer
+from .cellar import CellarSerializer, SaveCellarSerializer, ListCellarSerializer
