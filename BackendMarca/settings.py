@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     'product_sale_app.apps.ProductSaleAppConfig',
     'product_cellar_sale_app.apps.ProductCellarSaleAppConfig',
     'person_app.apps.PersonAppConfig',
+    'client_app.apps.ClientAppConfig',
+    'job_app.apps.JobAppConfig',
+    'employee_app.apps.EmployeeAppConfig',
 ]
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
